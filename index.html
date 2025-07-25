@@ -6,24 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sreenivasa Raju Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ✅ Popup styling -->
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0a192f;
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+        }
+    </style>
 </head>
-
-<script src="script.js"></script>
-
 
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Sreenivasa Raju Portfolio</h1>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider"></span>
+            </label>
+        </div>
         <nav>
-            <a href="#About-Me"><button class="button">About</button></a>
-            <a href="#Education"><button class="button">Education</button></a>
-            <a href="#Work-Experience"><button class="button">Experience</button></a>
-            <a href="#My-Skills"><button class="button">Skills</button></a>
-            <a href="#Projects"><button class="button">Projects</button></a>
-            <a href="#Contact-Me"><button class="button">Contact</button></a>
-            <a href="#Certifications"><button class="button">Certifications</button></a>
-            <a href="resume.pdf" download class="button download-resume">Download Resume (PDF)</a>
-
+            <a href="#About-Me" class="button">About</a>
+            <a href="#Education" class="button">Education</a>
+            <a href="#Work-Experience" class="button">Experience</a>
+            <a href="#My-Skills" class="button">Skills</a>
+            <a href="#Projects" class="button">Projects</a>
+            <a href="#Certifications" class="button">Certifications</a>
+            <a href="#Contact-Me" class="button">Contact</a>
+            <a href="resume.pdf" target="_blank" class="button download-resume">Resume</a>
         </nav>
     </header>
 
@@ -31,210 +50,137 @@
         <section id="About-Me">
             <div class="about-card">
                 <img src="profile.jpg" alt="Sreenivasa Raju Konduru" class="profile-img" />
-        
                 <div class="about-text">
                     <h1>Sreenivasa Raju Konduru</h1>
-                    <p>Recent Master's graduate in Computer Science from the <em>University of Florida</em> with a strong
-                        foundation in
-                        software development, system design, and full-stack engineering. Currently seeking full-time Software
-                        Development
-                        Engineer (SDE) roles in the U.S. with a focus on Java backend and full-stack web technologies.</p>
-                    <p>2+ years of industry experience as an Assistant Systems Engineer at Tata Consultancy Services (TCS),
-                        leading
-                        Java-based application development and CyberArk migration in the BFSI sector.</p>
-                    <p>Proficient in Java, Spring Boot, Hibernate, SQL, JavaScript, React, and REST APIs, with experience in
-                        full-stack web
-                        development and microservices architecture.</p>
-                    <p>Strong database expertise in MySQL, PostgreSQL, and NoSQL solutions, optimizing performance and ensuring
-                        data
-                        integrity.</p>
+                    <p>Master's in Computer Science from the University of Florida with 2+ years of software development
+                        experience at TCS. Skilled in Java, Spring Boot, React, REST APIs, and AWS. Open to full-time
+                        roles in backend or full-stack development.</p>
                 </div>
             </div>
         </section>
 
         <section id="Education">
             <h1>Education</h1>
-            <table border="1">
-                <tr>
-                    <th>S.no</th>
-                    <th>University Name</th>
-                    <th>Degree</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>University Of Florida</td>
-                    <td>Master's in Computer Science</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Sathyabama Institute Of Science and Technology</td>
-                    <td>Bachelor's in Computer Science</td>
-                </tr>
-            </table>
+            <ul>
+                <li><strong>University of Florida</strong> – MS in Computer Science</li>
+                <li><strong>Sathyabama Institute of Science & Technology</strong> – B.Tech in Computer Science</li>
+            </ul>
         </section>
 
         <section id="Work-Experience">
             <h1>Work Experience</h1>
-            <h3>Software Engineer – Tata Consultancy Services (TCS)</h3>
-            <p><strong>April 2021 – July 2023</strong></p>
+            <h3>Tata Consultancy Services (TCS) – Software Engineer</h3>
+            <p>Apr 2021 – Jul 2023</p>
             <ul>
-                <li>Led full-stack development of banking applications using Java, Spring Boot, REST APIs, and Angular.</li>
-                <li>Designed and implemented secure authentication and authorization using CyberArk PAS.</li>
-                <li>Automated deployment pipelines using Jenkins and Docker, reducing release time by 40%.</li>
-                <li>Built and maintained scalable microservices with PostgreSQL and Redis integration.</li>
-                <li>Collaborated with cross-functional teams in Agile/Scrum environment to deliver high-quality features.</li>
-                <li>Conducted code reviews and mentored junior developers to follow clean coding standards.</li>
-                <li>Resolved production incidents and applied hotfixes, ensuring business continuity with minimal downtime.</li>
-                <li>Created internal dashboards for real-time monitoring using Grafana and Prometheus.</li>
+                <li>Built secure Java-based banking applications using Spring Boot, REST APIs, and Angular.</li>
+                <li>Integrated CyberArk PAS for secure credential handling and RBAC.</li>
+                <li>Optimized CI/CD with Jenkins, Docker; reduced deployment time by 40%.</li>
             </ul>
         </section>
 
         <section id="My-Skills">
-            <h1>My Skills</h1>
-            <ol>
-                <li><strong>Programming Languages:</strong> Java, Python, JavaScript, TypeScript, SQL</li>
-                <li><strong>Backend Development:</strong> Spring Boot, Hibernate, REST APIs, Microservices, Go</li>
-                <li><strong>Frontend Development:</strong> React.js, Angular, HTML, CSS, Tailwind</li>
-                <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Oracle DB</li>
-                <li><strong>Cloud & DevOps:</strong> AWS (EC2, S3, RDS), Docker, Jenkins, GitHub Actions, Firebase</li>
-                <li><strong>Testing & QA:</strong> Cypress, JUnit, Karma, Jasmine, Testify</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-                <li><strong>Tools & Frameworks:</strong> F#, Copado, Salesforce, JWT</li>
-                <li><strong>Practices:</strong> Agile, Scrum, TDD, OOP, CI/CD, Secure Coding</li>
-            </ol>
+            <h1>Skills</h1>
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, JavaScript, SQL</li>
+                <li><strong>Frontend:</strong> React, Angular, HTML/CSS</li>
+                <li><strong>Backend:</strong> Spring Boot, REST APIs, Microservices</li>
+                <li><strong>DevOps:</strong> Docker, Jenkins, GitHub Actions</li>
+                <li><strong>Cloud:</strong> AWS (EC2, S3, RDS), Firebase</li>
+                <li><strong>Tools:</strong> Salesforce, Copado, Cypress</li>
+            </ul>
         </section>
 
         <section id="Projects">
             <h1>Projects</h1>
-        
             <div class="project">
-                <h2>📊 Crime Analysis using DBMS</h2>
-                <p>
-                    Built a MySQL-based crime record analysis system with advanced SQL
-                    queries. Implemented stored procedures for pattern analysis. Provided
-                    statistical reports and visual insights into regional crime trends.
-                </p>
+                <h3>📊 Crime Analysis using DBMS</h3>
+                <p>MySQL-based system with advanced queries, procedures, and visual analytics for crime pattern
+                    detection.</p>
             </div>
-        
             <div class="project">
-                <h2>🧬 Bioinformatics: Sequence Alignment Tool Comparison</h2>
-                <p>
-                    Compared Clustal Omega, MAFFT, and ProbCons on hemoglobin gene
-                    sequences. Evaluated alignment efficiency, mutation detection, and
-                    runtime. Demonstrated efficacy through qualitative and quantitative
-                    metrics.
-                </p>
+                <h3>🧬 Bioinformatics: Sequence Alignment Tool Comparison</h3>
+                <p>Compared Clustal Omega, MAFFT, and ProbCons on hemoglobin sequences. Evaluated accuracy and
+                    efficiency.</p>
             </div>
-        
             <div class="project">
-                <h2>📚 Library Management System (ADS Project)</h2>
-                <p>
-                    C++ menu-driven library system for issuing, returning, and tracking
-                    books. Used hash maps and trees for efficient catalog storage. Designed
-                    CLI-based interface for user/admin roles.
-                </p>
+                <h3>🧠 SkillArcade – Quiz Platform</h3>
+                <p>Full-stack quiz app using Go, Angular, MongoDB, with JWT-based login and leaderboard system.</p>
             </div>
-        
             <div class="project">
-                <h2>🧠 SkillArcade – Quiz Platform</h2>
-                <p>
-                    Full-stack platform using Golang backend, Angular frontend, and
-                    MongoDB. Integrated JWT-based authentication, role-based access,
-                    leaderboard system, and real-time score tracking. Used Cypress and
-                    Testify for robust testing.
-                </p>
-            </div>
-        
-            <div class="project">
-                <h2>🧠Semantic Segmentation of City Images (MLE Project):</h2>
-                <p>
-                    Implemented R2U-Net architecture to classify each pixel in urban street scenes using the Cityscapes dataset.
-                    
-                    Enhanced model robustness through recurrent residual layers and custom PyTorch pipelines.
-                    Evaluated with specificity, sensitivity, and F1 score; outperformed UNet/FCN baselines.
-                    Trained full dataset with GPU, optimized preprocessing, and handled class imbalance.
-                </p>
-            </div>
-        
-            <div class="project">
-                <h2>🔌 Client-Server Communication (CN Project)</h2>
-                <p>
-                    TCP-based chat application in C using socket programming. Implemented
-                    concurrent client handling and real-time messaging using select().
-                    Tested across Linux machines for robust interaction.
-                </p>
-            </div>
-        
-            <div class="project">
-                <h2>🌀 Chord Protocol Simulation (DOSP Project)</h2>
-                <p>
-                    Developed distributed hash table simulation in F# for peer-to-peer
-                    networking using Chord protocol. Implemented finger tables and
-                    consistent hashing. Simulated dynamic join/leave operations.
-                </p>
-            </div>
-        
-            <div class="project">
-                <h2>⚛️ Journey Builder – React Form System</h2>
-                <p>
-                    Built modular React-based Journey Builder used in Avocado Forms
-                    challenge. Implemented form dependencies, conditional logic, prefill
-                    mapping, badges, collapsible views, and reusable UI components. Added
-                    unit tests using Jest and performance optimizations.
-                </p>
+                <h3>⚛️ Journey Builder – React Form System</h3>
+                <p>React app with dependency-based forms, collapsible views, badges, test coverage using Jest.</p>
             </div>
         </section>
 
         <section id="Certifications">
             <h1>Certifications</h1>
-        
             <div class="certificate">
                 <h3>Salesforce Platform Developer I</h3>
-                <a href="salesforce-cert.pdf" target="_blank" rel="noopener noreferrer" class="button">
-                    View Certificate
-                </a>
+                <a href="salesforce-cert.pdf" target="_blank" class="button">View Certificate</a>
             </div>
-        
             <div class="certificate">
-                <h3>Copado Fundamentals I – Metadata Deployment</h3>
-                <a href="copado-cert.pdf" target="_blank" rel="noopener noreferrer" class="button">
-                    View Certificate
-                </a>
+                <h3>Copado Fundamentals I</h3>
+                <a href="copado-cert.pdf" target="_blank" class="button">View Certificate</a>
             </div>
         </section>
-        
-        
-        
-          
+
         <section id="Contact-Me">
             <h1>Contact Me</h1>
-            <form action="#">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" />
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" />
-                </div>
-                <div>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" />
-                </div>
-                <div>
-                    <label for="reason">Reason for reaching out:</label>
-                    <input type="text" id="reason" name="reason" />
-                </div>
+            <form id="contact-form" action="https://formspree.io/f/myzpwkpq" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
                 <button type="submit" class="submit">Submit</button>
             </form>
+        
+            <div id="popup" class="popup">✅ Thank you for submitting! I'll reach out soon.</div>
         </section>
+          
+           
     </main>
 
-    <a href="#"><button class="Top">Top</button></a>
+    <a href="#" class="Top">Top</a>
 
     <footer>
         <p>&copy; 2025 Sreenivasa Raju Konduru | All rights reserved.</p>
     </footer>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const popup = document.getElementById("popup");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: { Accept: "application/json" }
+                });
+
+                if (response.ok) {
+                    popup.style.display = "block";
+                    form.reset();
+                    setTimeout(() => {
+                        popup.style.display = "none";
+                    }, 3000);
+                } else {
+                    alert("⚠️ Submission failed. Please try again.");
+                }
+            } catch (error) {
+                alert("⚠️ Network error. Please try again.");
+            }
+        });
+    </script>
 </body>
 
 </html>
