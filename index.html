@@ -6,23 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sreenivasa Raju Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-
-    <!-- ✅ Popup styling -->
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #0a192f;
-            color: #fff;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
-        }
-    </style>
 </head>
 
 <body>
@@ -129,20 +112,18 @@
             <form id="contact-form" action="https://formspree.io/f/myzpwkpq" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
-        
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required />
-        
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-        
+
                 <button type="submit" class="submit">Submit</button>
             </form>
-        
+
             <div id="popup" class="popup">✅ Thank you for submitting! I'll reach out soon.</div>
         </section>
-          
-           
     </main>
 
     <a href="#" class="Top">Top</a>
@@ -180,6 +161,22 @@
                 alert("⚠️ Network error. Please try again.");
             }
         });
+
+        // Scroll reveal for sections
+        const revealElements = document.querySelectorAll("section");
+        function revealOnScroll() {
+            for (let i = 0; i < revealElements.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = revealElements[i].getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 100) {
+                    revealElements[i].classList.add("reveal");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener("load", revealOnScroll);
     </script>
 </body>
 
