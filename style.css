@@ -371,3 +371,68 @@ body.dark-mode .certificate h3,
 body.dark-mode .about-text h1 {
     color: #ffffff;
 }
+
+
+/* Footer Container */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0a192f;
+    color: white;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+    .footer {
+        background-color: #f4f4f4;
+        color: #0a192f;
+    }
+}
+
+/* Footer Icons Wrapper */
+.footer-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    /* 5 cm approx. on screen */
+    align-items: center;
+}
+
+/* Icon Links */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Icon SVG style (GitHub, LinkedIn icons) */
+.footer-icons a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Default Light Mode Colors */
+.footer-icons a {
+    color: #0a192f;
+}
+
+/* Hover for Light Mode */
+.footer-icons a:hover {
+    color:#52e0c4;
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+    .footer-icons a {
+        color: #64ffda;
+    }
+
+    .footer-icons a:hover {
+        color: #52e0c4;
+    }
+}
