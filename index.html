@@ -177,7 +177,28 @@
 
         window.addEventListener("scroll", revealOnScroll);
         window.addEventListener("load", revealOnScroll);
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const body = document.body;
+
+        // Load saved preference
+        if (localStorage.getItem("dark-mode") === "true") {
+            body.classList.add("dark-mode");
+            darkModeToggle.checked = true;
+        }
+
+        darkModeToggle.addEventListener("change", () => {
+            if (darkModeToggle.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "true");
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "false");
+            }
+        });
     </script>
+    
 </body>
 
 </html>
