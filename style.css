@@ -436,3 +436,23 @@ body.dark-mode .about-text h1 {
         color: #52e0c4;
     }
 }
+/* Light Mode Footer Social Buttons */
+.footer-icons a {
+    background-color: #0a192f;
+    /* dark background */
+    color: #ffffff;
+    /* white text/icon */
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-icons a:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    transform: scale(1.1);
+}
