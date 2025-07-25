@@ -166,6 +166,24 @@ footer {
     position: relative;
 }
 
+/* Social Buttons in Footer */
+footer .button {
+    display: inline-block;
+    margin: 5px 10px;
+    background-color: #64ffda;
+    color: #0a192f;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer .button:hover {
+    background-color: #52e0c4;
+    transform: scale(1.05);
+}
+
 /* Toggle Switch */
 .toggle-container {
     position: absolute;
@@ -227,10 +245,12 @@ input:checked+.slider:before {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 50%;
+    object-position: top center;
+    /* Adjust this if needed */
+    border-radius: 100%;
     border: 4px solid #64ffda;
 }
 
