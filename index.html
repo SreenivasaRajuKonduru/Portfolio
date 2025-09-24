@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sreenivasa Raju Konduru • Software Development Engineer</title>
     <meta name="description"
-        content="SDE portfolio — Java, Spring Boot, React, AWS, Python/Selenium. MS CS @ UF (May 2025), ex-TCS (BFSI). Open to full-time roles, available immediately." />
+        content="SDE portfolio — Java, Spring Boot, React, SQL, AWS, Python/Selenium. MS CS @ UF (May 2025), ex-TCS. Open to full-time, available immediately." />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -31,7 +31,7 @@
                 <a href="#education">Education</a>
                 <a href="#certs">Certifications</a>
                 <a href="#contact">Contact</a>
-                <a class="btn tiny" href="resume.pdf" target="_blank" rel="noopener" id="resumeBtn">
+                <a class="btn tiny" href="resume.pdf" target="_blank" rel="noopener">
                     <i class="fa-solid fa-file"></i> Resume
                 </a>
             </nav>
@@ -45,21 +45,22 @@
     <div class="hdr-spacer" aria-hidden="true"></div>
 
     <main class="shell">
-
-        <!-- ===== ABOUT / HERO ===== -->
+        <!-- ===== ABOUT ===== -->
         <section id="about" class="card hero">
-            <img src="profile.JPG" alt="Portrait of Sreenivasa Raju Konduru" class="avatar" />
+            <img src="profile.jpg" alt="Portrait of Sreenivasa Raju Konduru" class="avatar" />
             <div>
                 <h2>About</h2>
                 <p class="lead">
-                    MS in Computer Science candidate at the University of Florida (May 2025) and former Software Engineer at TCS (BFSI,
-                    2.5 years).
-                    I design and deliver secure, scalable systems across <strong>Java, Spring Boot, React, SQL, and AWS</strong>, with a
-                    focus on clean
-                    APIs, accessibility, and automation. At UF TAPS I build compliant WordPress/Gutenberg interfaces and engineered
-                    <strong>Python + Selenium</strong> automation for T2 Flex, turning manual processes into reliable, auditable
-                    workflows.
-                    <strong>Open to full-time SDE (backend/full-stack)</strong>, available immediately, US-based and ready to relocate.
+                    MS in Computer Science candidate at the University of Florida (May 2025) and former Software
+                    Engineer at TCS (BFSI, 2.5 years).
+                    I design and deliver secure, scalable systems with
+                    <strong>Java, Spring Boot, React, SQL, and AWS</strong>, with a focus on clean APIs, accessibility,
+                    and automation.
+                    At UF TAPS I build compliant WordPress/Gutenberg interfaces and engineered
+                    <strong>Python + Selenium</strong> automation for T2 Flex, turning manual processes into reliable,
+                    auditable workflows.
+                    <strong>Open to full-time SDE (backend/full-stack)</strong>, available immediately, US-based and
+                    ready to relocate.
                 </p>
 
                 <div class="badges">
@@ -68,7 +69,6 @@
                     <span class="badge">US · Remote / Hybrid / On-site</span>
                 </div>
 
-                <!-- Role Fit (Locations + Start only) -->
                 <div class="rolefit">
                     <div class="rf-col">
                         <h4>Locations</h4>
@@ -91,9 +91,6 @@
                     <a class="btn" href="https://linkedin.com/in/sreenivasarajukonduru" target="_blank"
                         rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
-
-                <p id="resumeWarn" class="warn" hidden>⚠️ <strong>resume.pdf</strong> not found or invalid. Place it
-                    next to index.html.</p>
             </div>
         </section>
 
@@ -114,9 +111,9 @@
                         <li>Built <strong>responsive, accessible permit workflows</strong> in UF’s Mercury WordPress +
                             Gutenberg using <strong>HTML5, CSS3, Bootstrap</strong>; ensured WCAG 2.1 AA and UF brand
                             compliance.</li>
-                        <li>Developed <strong>Python + Selenium automation</strong> for T2 Flex: Excel-driven bulk
-                            updates with open-plan checks, safe retries, SSO/MFA handling, reconciliation to Excel, and
-                            clear audit notes.</li>
+                        <li>Developed <strong>Python + Selenium automation</strong> for T2 Flex (Excel-driven bulk
+                            updates with open-plan checks, safe retries, SSO/MFA handling, reconciliation back to Excel,
+                            and clear audit notes).</li>
                         <li>Standardized UI with <strong>reusable block patterns</strong> and CSS utilities; added
                             linting/formatting and simple PR checks to keep templates consistent across pages and
                             devices.</li>
@@ -133,7 +130,7 @@
                 <button class="xp-hd" data-target="#tcs">
                     <div>
                         <h3>Tata Consultancy Services (TCS)</h3>
-                        <p class="meta">Software Engineer · Apr 2021 – Aug 2023 · Chennai, India · BFSI</p>
+                        <p class="meta">Software Engineer · Apr 2021 – Aug 2023 · Chennai, India · BFSI Domain</p>
                     </div>
                     <span class="chev" aria-hidden="true">▾</span>
                 </button>
@@ -296,7 +293,6 @@
         </section>
     </main>
 
-    <!-- Minimal footer (no duplicate links) -->
     <footer class="ftr">
         <div class="shell ftr-row">
             <p>&copy; 2025 Sreenivasa Raju Konduru</p>
@@ -346,14 +342,6 @@
                 chev.textContent = tgt.classList.contains('open') ? '▾' : '▸';
             });
         });
-
-        // ---- Resume health-check (warn if missing)
-        (async function () {
-            try {
-                const res = await fetch('resume.pdf', { method: 'HEAD' });
-                if (!res.ok) document.getElementById('resumeWarn').hidden = false;
-            } catch { document.getElementById('resumeWarn').hidden = false; }
-        })();
     </script>
 </body>
 

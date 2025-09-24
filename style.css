@@ -255,12 +255,6 @@ p {
     margin: .15rem 0 .5rem
 }
 
-.warn {
-    color: #b93838;
-    font-weight: 700;
-    margin-top: 8px
-}
-
 /* Badges */
 .badges {
     display: flex;
