@@ -3,232 +3,358 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sreenivasa Raju Konduru</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sreenivasa Raju Konduru • Software Development Engineer</title>
+    <meta name="description"
+        content="SDE portfolio — Java, Spring Boot, React, AWS, Python/Selenium. MS CS @ UF (May 2025), ex-TCS (BFSI). Open to full-time roles, available immediately." />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    
-
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1>Sreenivasa Raju Konduru</h1>
-        <div class="toggle-container">
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle" />
+    <a class="skip" href="#about">Skip to content</a>
+
+    <!-- ===== Header ===== -->
+    <header class="hdr">
+        <div class="shell hdr-row">
+            <div class="brand">
+                <h1 class="title">Sreenivasa Raju Konduru</h1>
+                <p class="subtitle">Software Development Engineer (SDE)</p>
+            </div>
+
+            <nav class="nav" aria-label="Main">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#certs">Certifications</a>
+                <a href="#contact">Contact</a>
+                <a class="btn tiny" href="resume.pdf" target="_blank" rel="noopener" id="resumeBtn">
+                    <i class="fa-solid fa-file"></i> Resume
+                </a>
+            </nav>
+
+            <label class="switch" aria-label="Toggle dark mode">
+                <input type="checkbox" id="darkToggle" />
                 <span class="slider"></span>
             </label>
         </div>
-        <nav>
-            <a href="#About-Me" class="button">About</a>
-            <a href="#Education" class="button">Education</a>
-            <a href="#Work-Experience" class="button">Experience</a>
-            <a href="#My-Skills" class="button">Skills</a>
-            <a href="#Projects" class="button">Projects</a>
-            <a href="#Certifications" class="button">Certifications</a>
-            <a href="#Contact-Me" class="button">Contact</a>
-            <a href="resume.pdf" target="_blank" class="button download-resume">Resume</a>
-        </nav>
     </header>
+    <div class="hdr-spacer" aria-hidden="true"></div>
 
-    <main>
-        <section id="About-Me">
-            <div class="about-card">
-                <img src="profile.jpg" alt="Sreenivasa Raju Konduru" class="profile-img" />
-                <div class="about-text">
-                    <h1>Sreenivasa Raju Konduru</h1>
-                    <p>Master's in Computer Science from the University of Florida with 2+ years of software development
-                        experience at TCS. Skilled in Java, Spring Boot, React, REST APIs, and AWS. Open to full-time
-                        roles in backend or full-stack development.</p>
+    <main class="shell">
+
+        <!-- ===== ABOUT / HERO ===== -->
+        <section id="about" class="card hero">
+            <img src="profile.JPG" alt="Portrait of Sreenivasa Raju Konduru" class="avatar" />
+            <div>
+                <h2>About</h2>
+                <p class="lead">
+                    MS in Computer Science candidate at the University of Florida (May 2025) and former Software Engineer at TCS (BFSI,
+                    2.5 years).
+                    I design and deliver secure, scalable systems across <strong>Java, Spring Boot, React, SQL, and AWS</strong>, with a
+                    focus on clean
+                    APIs, accessibility, and automation. At UF TAPS I build compliant WordPress/Gutenberg interfaces and engineered
+                    <strong>Python + Selenium</strong> automation for T2 Flex, turning manual processes into reliable, auditable
+                    workflows.
+                    <strong>Open to full-time SDE (backend/full-stack)</strong>, available immediately, US-based and ready to relocate.
+                </p>
+
+                <div class="badges">
+                    <span class="badge">Open to Full-Time</span>
+                    <span class="badge">Availability: Immediately</span>
+                    <span class="badge">US · Remote / Hybrid / On-site</span>
+                </div>
+
+                <!-- Role Fit (Locations + Start only) -->
+                <div class="rolefit">
+                    <div class="rf-col">
+                        <h4>Locations</h4>
+                        <div class="pills">
+                            <span>United States</span><span>Ready to
+                                relocate</span><span>Remote</span><span>Hybrid</span>
+                        </div>
+                    </div>
+                    <div class="rf-col rf-meta">
+                        <h4>Start</h4>
+                        <div class="pills"><span>Immediately</span></div>
+                    </div>
+                </div>
+
+                <div class="cta">
+                    <a class="btn" href="resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file"></i>
+                        Resume</a>
+                    <a class="btn" href="https://github.com/SreenivasaRajuKonduru" target="_blank" rel="noopener"><i
+                            class="fab fa-github"></i> GitHub</a>
+                    <a class="btn" href="https://linkedin.com/in/sreenivasarajukonduru" target="_blank"
+                        rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+
+                <p id="resumeWarn" class="warn" hidden>⚠️ <strong>resume.pdf</strong> not found or invalid. Place it
+                    next to index.html.</p>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="card">
+            <h2>Experience</h2>
+
+            <article class="xp">
+                <button class="xp-hd" data-target="#uf">
+                    <div>
+                        <h3>University of Florida — Transportation & Parking Services (TAPS)</h3>
+                        <p class="meta">Web Developer & Automation Engineer · Sep 2024 – Present · Gainesville, FL</p>
+                    </div>
+                    <span class="chev" aria-hidden="true">▾</span>
+                </button>
+                <div id="uf" class="xp-body open">
+                    <ul>
+                        <li>Built <strong>responsive, accessible permit workflows</strong> in UF’s Mercury WordPress +
+                            Gutenberg using <strong>HTML5, CSS3, Bootstrap</strong>; ensured WCAG 2.1 AA and UF brand
+                            compliance.</li>
+                        <li>Developed <strong>Python + Selenium automation</strong> for T2 Flex: Excel-driven bulk
+                            updates with open-plan checks, safe retries, SSO/MFA handling, reconciliation to Excel, and
+                            clear audit notes.</li>
+                        <li>Standardized UI with <strong>reusable block patterns</strong> and CSS utilities; added
+                            linting/formatting and simple PR checks to keep templates consistent across pages and
+                            devices.</li>
+                        <li>Partnered with <strong>UFIT & operations</strong> on requirements, cross-browser QA, staged
+                            rollouts, and accessibility reviews (Axe/DevTools).</li>
+                    </ul>
+                    <div class="chips"><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>WCAG
+                            2.1</span><span>WordPress/Gutenberg</span><span>Python</span><span>Selenium</span><span>Excel</span><span>T2
+                            Flex</span></div>
+                </div>
+            </article>
+
+            <article class="xp">
+                <button class="xp-hd" data-target="#tcs">
+                    <div>
+                        <h3>Tata Consultancy Services (TCS)</h3>
+                        <p class="meta">Software Engineer · Apr 2021 – Aug 2023 · Chennai, India · BFSI</p>
+                    </div>
+                    <span class="chev" aria-hidden="true">▾</span>
+                </button>
+                <div id="tcs" class="xp-body open">
+                    <ul>
+                        <li>Designed and maintained <strong>Java/Spring Boot</strong> microservices with secure
+                            <strong>REST APIs</strong> for core banking flows; authored unit/integration tests and API
+                            documentation.</li>
+                        <li>Tuned <strong>Oracle SQL</strong> (indexes, batching, execution plans) and stabilized
+                            services on Unix/Linux with health checks, graceful restarts, and config management.</li>
+                        <li>Implemented secrets governance via <strong>CyberArk PAS</strong> integrated with
+                            <strong>LDAP/AD</strong> (policy-based access, automated rotation) to reduce credential
+                            risk.</li>
+                        <li>Improved delivery with <strong>Git/Jenkins CI/CD</strong>: build pipelines, test gates,
+                            versioned artifacts, and safe rollout/rollback across environments.</li>
+                        <li>Enhanced diagnostics with <strong>Splunk · New Relic · Kibana</strong> dashboards; built
+                            small scripts to speed incident triage and root-cause notes in Jira/qTest.</li>
+                    </ul>
+                    <div class="chips"><span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Oracle
+                            SQL</span><span>CyberArk
+                            PAS</span><span>LDAP/AD</span><span>Git</span><span>Jenkins</span><span>Splunk</span><span>Kibana</span><span>New
+                            Relic</span></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <div class="grid">
+                <article class="proj">
+                    <h3>📊 Crime Data Analysis for Safer Communities</h3>
+                    <p>Full-stack app that ingests Chicago crime data, exposes Flask REST endpoints for dynamic trend
+                        queries, and renders interactive React charts. Built server-side filtering, cached views (type,
+                        geo, day/season), and keyboard-friendly visualizations.</p>
+                    <div class="chips">
+                        <span>React</span><span>Flask</span><span>Python</span><span>SQL</span><span>Postman</span>
+                    </div>
+                </article>
+                <article class="proj">
+                    <h3>🗂️ Task Manager Web App</h3>
+                    <p>MERN application with JWT auth/refresh, protected routes, and RBAC guards. Optimistic UI with
+                        React hooks, rate-limited APIs, and testable endpoints.</p>
+                    <div class="chips">
+                        <span>React</span><span>Node</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+                    </div>
+                </article>
+                <article class="proj">
+                    <h3>📚 GatorLibrary — Library Management System</h3>
+                    <p>Java backend with custom data structures: Red-Black Tree for balanced lookups and Min Heap for
+                        reservation priority. Clean OOP and CLI UX.</p>
+                    <div class="chips"><span>Java</span><span>Red-Black Tree</span><span>Min Heap</span><span>OOP</span>
+                    </div>
+                </article>
+                <article class="proj">
+                    <h3>🧠 SkillArcade — Quiz Platform</h3>
+                    <p>Go + Angular platform with JWT login, timed quizzes, and leaderboard caching. Defined REST
+                        contracts, added Cypress E2E, and wired CI.</p>
+                    <div class="chips">
+                        <span>Go</span><span>Angular</span><span>MongoDB</span><span>JWT</span><span>Cypress</span>
+                    </div>
+                </article>
+                <article class="proj">
+                    <h3>🧪 Semantic Segmentation of City Images</h3>
+                    <p>Trained R2U-Net on Cityscapes for pixel-wise scene understanding. Tuned LR schedules and
+                        augmentations; measured mIoU; analyzed low-light/occlusion cases.</p>
+                    <div class="chips">
+                        <span>Python</span><span>PyTorch</span><span>R2U-Net</span><span>Cityscapes</span></div>
+                </article>
+            </div>
+            <p class="note">Explore my code: <a href="https://github.com/SreenivasaRajuKonduru" target="_blank"
+                    rel="noopener"><strong>GitHub</strong></a></p>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <ul class="stack">
+                <li><strong>Languages:</strong> Java, Python, JavaScript, TypeScript, SQL, Bash, HTML5, CSS3</li>
+                <li><strong>Backend:</strong> Spring Boot, REST APIs, Microservices, Maven, Gradle, JPA/Hibernate,
+                    Node.js, Express.js, Flask</li>
+                <li><strong>Frontend:</strong> React, Bootstrap, jQuery, WordPress, Accessibility (WCAG), Responsive
+                    Design, AJAX</li>
+                <li><strong>Databases:</strong> Oracle, PostgreSQL, MySQL, MongoDB</li>
+                <li><strong>Cloud & DevOps:</strong> AWS, Docker, Linux/Unix, CI/CD, Git, Jenkins, Shell Scripting,
+                    Selenium/ChromeDriver</li>
+                <li><strong>Security & Auth:</strong> CyberArk PAS, LDAP/AD, OAuth2, JWT, Secure Coding</li>
+                <li><strong>Testing & Observability:</strong> JUnit, Mockito, Postman, qTest, Splunk, Kibana, New Relic,
+                    Chrome DevTools</li>
+                <li><strong>Tools:</strong> IntelliJ IDEA, Eclipse, VS Code, Oracle SQL Developer, PuTTY, Jira, pandas,
+                    openpyxl</li>
+                <li><strong>Practices:</strong> Agile/Scrum, Code Reviews, API Design, System Design Basics, DS&A</li>
+            </ul>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <ul class="edu">
+                <li><strong>University of Florida</strong> — M.S. Computer & Information Science (May 2025)</li>
+                <li><strong>Sathyabama Institute of Science & Technology</strong> — B.E. Computer Science Engineering
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section id="certs" class="card">
+            <h2>Certifications</h2>
+            <div class="grid grid-2">
+                <article class="cert">
+                    <h3>Salesforce Platform Developer I</h3>
+                    <a class="btn ghost" href="salesforce-cert.pdf" target="_blank" rel="noopener">View</a>
+                </article>
+                <article class="cert">
+                    <h3>Copado Fundamentals I</h3>
+                    <a class="btn ghost" href="copado-cert.pdf" target="_blank" rel="noopener">View</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="card contact-grid">
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <p>Hiring for <strong>full-stack / backend / platform</strong> SDE roles? I’d love to chat.</p>
+                <div class="quick">
+                    <a class="btn block" href="mailto:kondurusreenivasaraju1@gmail.com" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-envelope"></i> kondurusreenivasaraju1@gmail.com
+                    </a>
+                    <a class="btn ghost block" href="https://linkedin.com/in/sreenivasarajukonduru" target="_blank"
+                        rel="noopener">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                    <a class="btn ghost block" href="https://github.com/SreenivasaRajuKonduru" target="_blank"
+                        rel="noopener">
+                        <i class="fab fa-github"></i> GitHub Profile
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <section id="Education">
-            <h1>Education</h1>
-            <ul>
-                <li><strong>University of Florida</strong> – Master's in Computer and Information Sciences and Engineering</li>
-                <li><strong>Sathyabama Institute of Science & Technology</strong> – Bachelor's in Computer Science Engineering</li>
-            </ul>
-        </section>
-
-        <section id="Work-Experience">
-            <h1>Work Experience</h1>
-            <h3>Tata Consultancy Services (TCS) – Software Engineer</h3>
-            <p>Apr 2021 – Jul 2023</p>
-            <ul>
-                <li>Built secure Java-based banking applications using Spring Boot, REST APIs, and Angular.</li>
-                <li>Integrated CyberArk PAS for secure credential handling and RBAC.</li>
-                <li>Optimized CI/CD with Jenkins, Docker; reduced deployment time by 40%.</li>
-            </ul>
-        </section>
-
-        <section id="My-Skills">
-            <h1>Skills</h1>
-            <ul>
-                <li><strong>Languages:</strong> Java, Python, JavaScript, TypeScript, SQL, Bash</li>
-                <li><strong>Frontend:</strong> React, Angular, HTML, CSS, Responsive Design</li>
-                <li><strong>Backend:</strong> Spring Boot (Java), Node.js, Flask (Python), REST APIs, Microservices</li>
-                <li><strong>Databases:</strong> PostgreSQL, MySQL, Oracle, MongoDB, SQL Server (basic)</li>
-                <li><strong>Cloud & Infrastructure:</strong> AWS (EC2, S3, RDS – basic), Firebase, Docker, Linux/Unix, CyberArk
-                    Vault</li>
-                <li><strong>Developer Tools:</strong> Git, GitHub Actions, Jenkins, Eclipse, IntelliJ, VS Code, JIRA, Postman,
-                    qTest</li>
-                <li><strong>Monitoring & Debugging:</strong> Splunk, New Relic, Kibana, API Debugging</li>
-                <li><strong>Authentication & Security:</strong> CyberArk, OAuth, JWT, LDAP, Secure Coding</li>
-                <li><strong>Development Practices:</strong> Agile (Scrum), Unit Testing, CI/CD, Version Control, System Design
-                    Basics</li>
-                <li><strong>Others:</strong> Salesforce, Copado, Cypress, Oracle SQL Developer, PuTTY</li>
-            </ul>
-        </section>
-        
-
-        <section id="Projects">
-            <h1>Projects</h1>
-            <div class="project">
-                <h3>📊 Crime Analysis using DBMS</h3>
-                <p>MySQL-based system with advanced queries, procedures, and visual analytics for crime pattern
-                    detection.</p>
-            </div>
-            <div class="project">
-                <h3>🧬 Bioinformatics: Sequence Alignment Tool Comparison</h3>
-                <p>Compared Clustal Omega, MAFFT, and ProbCons on hemoglobin sequences. Evaluated accuracy and
-                    efficiency.</p>
-            </div>
-            <div class="project">
-                <h3>🧠 SkillArcade – Quiz Platform</h3>
-                <p>Full-stack quiz app using Go, Angular, MongoDB, with JWT-based login and leaderboard system.</p>
-            </div>
-            <div class="project">
-                <h3>⚛️ Journey Builder – React Form System</h3>
-                <p>React app with dependency-based forms, collapsible views, badges, test coverage using Jest.</p>
-            </div>
-            <div class="project">
-                <h3>📚 GatorLibrary – Library Management System</h3>
-                <p>Built using Red-Black Trees and Min Heaps to efficiently manage books and patron reservations.</p>
-            </div>
-            <div class="project">
-                <h3>🧪 Semantic Segmentation of City Images</h3>
-                <p>Trained R2U-Net model on Cityscapes dataset for pixel-wise image classification and street scene understanding.
-                </p>      
-            </div>
-        </section>
-
-        <section id="Certifications">
-            <h1>Certifications</h1>
-            <div class="certificate">
-                <h3>Salesforce Platform Developer I</h3>
-                <a href="salesforce-cert.pdf" target="_blank" class="button">View Certificate</a>
-            </div>
-            <div class="certificate">
-                <h3>Copado Fundamentals I</h3>
-                <a href="copado-cert.pdf" target="_blank" class="button">View Certificate</a>
-            </div>
-        </section>
-
-        <section id="Contact-Me">
-            <h1>Contact Me</h1>
-            <form id="contact-form" action="https://formspree.io/f/myzpwkpq" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit" class="submit">Submit</button>
+            <form id="contactForm" action="https://formspree.io/f/myzpwkpq" method="POST" class="contact-form"
+                autocomplete="on" novalidate>
+                <div class="field">
+                    <input id="name" name="name" required />
+                    <label for="name">Your name</label>
+                </div>
+                <div class="field">
+                    <input id="email" name="email" type="email" inputmode="email" required />
+                    <label for="email">Email</label>
+                </div>
+                <div class="field span-2">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button class="btn large span-2" type="submit"><i class="fa-solid fa-paper-plane"></i> Send
+                    Message</button>
             </form>
 
-            <div id="popup" class="popup">✅ Thank you for submitting! I'll reach out soon.</div>
+            <div id="toast" class="toast" role="alert" aria-live="polite">✅ Thanks! I’ll reply soon.</div>
         </section>
     </main>
 
-    <a href="#" class="Top">Top</a>
-
-    <footer>
-        <p>&copy; 2025 Sreenivasa Raju Konduru | All rights reserved.</p>
-        <div class="footer-icons">
-            <a href="https://github.com/SreenivasaRajuKonduru" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/sreenivasarajukonduru" target="_blank">
-                 <i class="fab fa-linkedin"></i> LinkedIn
-            </a>  
+    <!-- Minimal footer (no duplicate links) -->
+    <footer class="ftr">
+        <div class="shell ftr-row">
+            <p>&copy; 2025 Sreenivasa Raju Konduru</p>
         </div>
     </footer>
-    
+
+    <a href="#" class="to-top" aria-label="Back to top">↑</a>
 
     <script>
-        const form = document.getElementById("contact-form");
-        const popup = document.getElementById("popup");
+        // ---- Dark mode (persistent + respects system on first load)
+        (function () {
+            const key = 'srk-dark';
+            const toggle = document.getElementById('darkToggle');
+            const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const saved = localStorage.getItem(key);
+            const initial = saved === null ? prefers : saved === '1';
+            document.body.classList.toggle('dark', initial);
+            toggle.checked = initial;
+            toggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark', toggle.checked);
+                localStorage.setItem(key, toggle.checked ? '1' : '0');
+            });
+        })();
 
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
+        // ---- Contact form toast
+        (function () {
+            const form = document.getElementById('contactForm');
+            const toast = document.getElementById('toast');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!form.reportValidity()) return;
+                const fd = new FormData(form);
+                try {
+                    const r = await fetch(form.action, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+                    if (r.ok) { toast.classList.add('show'); form.reset(); setTimeout(() => toast.classList.remove('show'), 2500); }
+                    else { alert('Submission failed. Please try again.'); }
+                } catch { alert('Network error. Please try again.'); }
+            });
+        })();
 
-            const formData = new FormData(form);
+        // ---- Accordions
+        document.querySelectorAll('.xp-hd').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tgt = document.querySelector(btn.getAttribute('data-target'));
+                const chev = btn.querySelector('.chev');
+                tgt.classList.toggle('open');
+                chev.textContent = tgt.classList.contains('open') ? '▾' : '▸';
+            });
+        });
 
+        // ---- Resume health-check (warn if missing)
+        (async function () {
             try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: { Accept: "application/json" }
-                });
-
-                if (response.ok) {
-                    popup.style.display = "block";
-                    form.reset();
-                    setTimeout(() => {
-                        popup.style.display = "none";
-                    }, 3000);
-                } else {
-                    alert("⚠️ Submission failed. Please try again.");
-                }
-            } catch (error) {
-                alert("⚠️ Network error. Please try again.");
-            }
-        });
-
-        // Scroll reveal for sections
-        const revealElements = document.querySelectorAll("section");
-        function revealOnScroll() {
-            for (let i = 0; i < revealElements.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = revealElements[i].getBoundingClientRect().top;
-
-                if (elementTop < windowHeight - 100) {
-                    revealElements[i].classList.add("reveal");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", revealOnScroll);
-        window.addEventListener("load", revealOnScroll);
-
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById("darkModeToggle");
-        const body = document.body;
-
-        // Load saved preference
-        if (localStorage.getItem("dark-mode") === "true") {
-            body.classList.add("dark-mode");
-            darkModeToggle.checked = true;
-        }
-
-        darkModeToggle.addEventListener("change", () => {
-            if (darkModeToggle.checked) {
-                body.classList.add("dark-mode");
-                localStorage.setItem("dark-mode", "true");
-            } else {
-                body.classList.remove("dark-mode");
-                localStorage.setItem("dark-mode", "false");
-            }
-        });
+                const res = await fetch('resume.pdf', { method: 'HEAD' });
+                if (!res.ok) document.getElementById('resumeWarn').hidden = false;
+            } catch { document.getElementById('resumeWarn').hidden = false; }
+        })();
     </script>
-    
 </body>
 
 </html>
