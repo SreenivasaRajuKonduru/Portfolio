@@ -1,6 +1,6 @@
 /* ===== Root & Reset ===== */
 :root {
-    /* Light theme */
+    /* Light */
     --bg: #f7f9fd;
     --ink: #0a192f;
     --text: #1f2430;
@@ -11,7 +11,7 @@
     --accent-2: #42e3c1;
     --shadow: 0 12px 36px rgba(13, 23, 43, .08);
 
-    /* Dark theme */
+    /* Dark */
     --d-bg: #0b1220;
     --d-card: #10192b;
     --d-text: #f6fbff;
@@ -31,11 +31,17 @@ html {
     scroll-padding-top: 88px
 }
 
+@media (max-width:720px) {
+    html {
+        scroll-padding-top: 72px
+    }
+}
+
 body {
     margin: 0;
+    line-height: 1.65;
     font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
     color: var(--text);
-    line-height: 1.65;
     font-size: clamp(15px, 1.05vw, 18px);
     background:
         radial-gradient(1200px 600px at 10% -10%, #eaf6ff 0%, rgba(234, 246, 255, 0) 60%),
@@ -92,11 +98,6 @@ a {
     padding: 10px 0
 }
 
-.hdr-spacer {
-    height: 0
-}
-
-/* sticky already */
 .brand .title {
     margin: 0;
     font-size: clamp(1.05rem, 2.5vw, 1.3rem);
@@ -165,7 +166,7 @@ a {
     color: #062225
 }
 
-/* Hamburger (shown under 860px) */
+/* Hamburger activates earlier so brand fits */
 .hamb {
     display: none;
     background: transparent;
@@ -186,7 +187,7 @@ a {
     border-radius: 3px
 }
 
-@media (max-width:860px) {
+@media (max-width:1100px) {
     .hamb {
         display: inline-flex
     }
@@ -210,6 +211,10 @@ a {
 
     body.nav-open {
         overflow: hidden
+    }
+
+    .brand .subtitle {
+        display: none
     }
 }
 
@@ -299,6 +304,22 @@ p {
 .meta {
     color: var(--muted);
     margin: .15rem 0 .5rem
+}
+
+/* Big hero name */
+.display {
+    grid-column: 1 / -1;
+    margin: 0 0 4px;
+    font-size: clamp(1.6rem, 4.8vw, 2.4rem);
+    line-height: 1.15;
+    color: #0a192f
+}
+
+.display-sub {
+    grid-column: 1 / -1;
+    margin: 0 0 10px;
+    color: #2b3a55;
+    font-weight: 700
 }
 
 /* Badges */
@@ -495,7 +516,7 @@ p {
     background: #fff
 }
 
-/* ===== Contact (grid + floating labels) ===== */
+/* ===== Contact ===== */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -539,7 +560,7 @@ p {
     color: #111;
     font-size: 1rem;
     outline: none;
-    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    transition: border-color .2s, box-shadow .2s, background .2s, color .2s;
 }
 
 .field textarea {
@@ -561,7 +582,7 @@ p {
     color: #6b7486;
     font-size: .95rem;
     transform-origin: left top;
-    transition: transform .16s ease, color .16s ease, top .16s ease, background .16s ease;
+    transition: transform .16s, color .16s, top .16s, background .16s;
 }
 
 .field input:focus+label,
@@ -586,7 +607,7 @@ p {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
     opacity: 0;
     pointer-events: none;
-    transition: opacity .25s ease;
+    transition: opacity .25s;
     z-index: 1000
 }
 
@@ -594,7 +615,7 @@ p {
     opacity: 1
 }
 
-/* Footer */
+/* Footer & Top */
 .ftr {
     background: #0a192f;
     color: #fff;
@@ -609,7 +630,6 @@ p {
     padding: 18px 0
 }
 
-/* Back to top */
 .to-top {
     position: fixed;
     bottom: 18px;
@@ -628,7 +648,7 @@ p {
     transform: translateY(-2px)
 }
 
-/* ===== DARK MODE ===== */
+/* ===== Dark Mode ===== */
 body.dark {
     color: var(--d-text);
     background:
@@ -754,15 +774,15 @@ body.dark .field textarea:not(:placeholder-shown)+label {
     color: #eaf6ff
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 980px) {
+/* ===== Responsive tweaks ===== */
+@media (max-width:980px) {
     .rolefit {
         grid-template-columns: 1fr;
         gap: 10px
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width:860px) {
     .hero {
         grid-template-columns: 100px 1fr
     }
@@ -773,7 +793,7 @@ body.dark .field textarea:not(:placeholder-shown)+label {
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width:720px) {
     .hero {
         grid-template-columns: 1fr
     }
@@ -794,9 +814,5 @@ body.dark .field textarea:not(:placeholder-shown)+label {
 
     .contact-form .span-2 {
         grid-column: auto
-    }
-
-    html {
-        scroll-padding-top: 72px
     }
 }
