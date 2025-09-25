@@ -7,7 +7,7 @@
     <title>Sreenivasa Raju Konduru • Software Development Engineer</title>
     <meta name="description"
         content="SDE portfolio — Java, Spring Boot, React, SQL, AWS, Python/Selenium. MS CS @ UF (May 2025), ex-TCS. Open to full-time, available immediately." />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css?v=5" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -23,7 +23,12 @@
                 <p class="subtitle">Software Development Engineer (SDE)</p>
             </div>
 
-            <nav class="nav" aria-label="Main">
+            <!-- Mobile hamburger -->
+            <button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="mainNav" aria-label="Main">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
@@ -274,15 +279,15 @@
             <form id="contactForm" action="https://formspree.io/f/myzpwkpq" method="POST" class="contact-form"
                 autocomplete="on" novalidate>
                 <div class="field">
-                    <input id="name" name="name" required />
+                    <input id="name" name="name" required placeholder=" " />
                     <label for="name">Your name</label>
                 </div>
                 <div class="field">
-                    <input id="email" name="email" type="email" inputmode="email" required />
+                    <input id="email" name="email" type="email" inputmode="email" required placeholder=" " />
                     <label for="email">Email</label>
                 </div>
                 <div class="field span-2">
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
                     <label for="message">Message</label>
                 </div>
                 <button class="btn large span-2" type="submit"><i class="fa-solid fa-paper-plane"></i> Send
@@ -342,6 +347,21 @@
                 chev.textContent = tgt.classList.contains('open') ? '▾' : '▸';
             });
         });
+
+        // ---- Mobile hamburger
+        (function () {
+            const hamb = document.getElementById('hamb');
+            const nav = document.getElementById('mainNav');
+            hamb.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+                document.body.classList.toggle('nav-open', open);
+            });
+            // Close on link click (mobile)
+            nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                nav.classList.remove('open'); document.body.classList.remove('nav-open'); hamb.setAttribute('aria-expanded', 'false');
+            }));
+        })();
     </script>
 </body>
 

@@ -35,11 +35,8 @@ body {
     margin: 0;
     font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
     color: var(--text);
-    line-height: 1.65
-}
-
-/* Subtle gradient + grid for LIGHT mode */
-body {
+    line-height: 1.65;
+    font-size: clamp(15px, 1.05vw, 18px);
     background:
         radial-gradient(1200px 600px at 10% -10%, #eaf6ff 0%, rgba(234, 246, 255, 0) 60%),
         radial-gradient(1000px 500px at 120% 10%, #fff8ed 0%, rgba(255, 248, 237, 0) 55%),
@@ -60,7 +57,7 @@ a {
 .shell {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px
+    padding: 0 16px
 }
 
 .skip {
@@ -80,10 +77,10 @@ a {
 
 /* ===== Header ===== */
 .hdr {
-    position: fixed;
-    inset: 0 0 auto 0;
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    background: rgba(10, 25, 47, .92);
+    background: rgba(10, 25, 47, .95);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, .08)
 }
@@ -91,24 +88,25 @@ a {
 .hdr-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     padding: 10px 0
 }
 
 .hdr-spacer {
-    height: 64px
+    height: 0
 }
 
+/* sticky already */
 .brand .title {
     margin: 0;
-    font-size: 1.15rem;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
     color: #fff
 }
 
 .brand .subtitle {
     margin: 2px 0 0;
     color: #cfe7ff;
-    font-size: .88rem
+    font-size: .9rem
 }
 
 /* Nav */
@@ -167,6 +165,54 @@ a {
     color: #062225
 }
 
+/* Hamburger (shown under 860px) */
+.hamb {
+    display: none;
+    background: transparent;
+    border: 0;
+    width: 44px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 10px
+}
+
+.hamb span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: #eaf6ff;
+    border-radius: 3px
+}
+
+@media (max-width:860px) {
+    .hamb {
+        display: inline-flex
+    }
+
+    .nav {
+        position: fixed;
+        inset: 60px 0 auto 0;
+        background: #0a192f;
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
+        padding: 10px 14px;
+        transform: translateY(-120%);
+        transition: transform .25s ease;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto
+    }
+
+    .nav.open {
+        transform: translateY(0)
+    }
+
+    body.nav-open {
+        overflow: hidden
+    }
+}
+
 /* Dark toggle */
 .switch {
     position: relative;
@@ -215,8 +261,8 @@ a {
     border: 1px solid var(--ring);
     border-radius: 16px;
     box-shadow: var(--shadow);
-    padding: 26px;
-    margin: 22px 0
+    padding: 22px;
+    margin: 18px 0
 }
 
 .hero {
@@ -243,7 +289,7 @@ h3 {
 }
 
 .lead {
-    font-size: 1.1rem
+    font-size: clamp(1rem, 1.1vw, 1.2rem)
 }
 
 p {
@@ -398,11 +444,11 @@ p {
 .grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
 }
 
 .grid-2 {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
 }
 
 .proj {
@@ -531,7 +577,7 @@ p {
 .toast {
     position: fixed;
     left: 50%;
-    bottom: 24px;
+    bottom: 20px;
     transform: translateX(-50%);
     background: #0a192f;
     color: #fff;
@@ -548,7 +594,7 @@ p {
     opacity: 1
 }
 
-/* Footer (minimal) */
+/* Footer */
 .ftr {
     background: #0a192f;
     color: #fff;
@@ -582,7 +628,7 @@ p {
     transform: translateY(-2px)
 }
 
-/* ===== DARK MODE (designed, with grid) ===== */
+/* ===== DARK MODE ===== */
 body.dark {
     color: var(--d-text);
     background:
@@ -593,7 +639,7 @@ body.dark {
 }
 
 body.dark .hdr {
-    background: rgba(13, 23, 43, .92);
+    background: rgba(13, 23, 43, .95);
     border-bottom-color: rgba(255, 255, 255, .08)
 }
 
@@ -689,27 +735,26 @@ body.dark .toast {
     background: #173356
 }
 
-/* Dark-mode form */
 body.dark .field input,
 body.dark .field textarea {
     background: var(--d-card);
     color: var(--d-text);
-    border-color: #31415b;
+    border-color: #31415b
 }
 
 body.dark .field label {
     background: var(--d-card);
-    color: #c9d6ea;
+    color: #c9d6ea
 }
 
 body.dark .field input:focus+label,
 body.dark .field textarea:focus+label,
 body.dark .field input:not(:placeholder-shown)+label,
 body.dark .field textarea:not(:placeholder-shown)+label {
-    color: #eaf6ff;
+    color: #eaf6ff
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 980px) {
     .rolefit {
         grid-template-columns: 1fr;
@@ -717,7 +762,28 @@ body.dark .field textarea:not(:placeholder-shown)+label {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
+    .hero {
+        grid-template-columns: 100px 1fr
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px
+    }
+}
+
+@media (max-width: 720px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 10px
+    }
+
     .contact-grid {
         grid-template-columns: 1fr
     }
@@ -729,20 +795,8 @@ body.dark .field textarea:not(:placeholder-shown)+label {
     .contact-form .span-2 {
         grid-column: auto
     }
-}
-
-@media (max-width: 800px) {
-    .hero {
-        grid-template-columns: 1fr
-    }
-
-    .avatar {
-        width: 160px;
-        height: 160px;
-        margin: 0 auto 8px
-    }
 
     html {
-        scroll-padding-top: 96px
+        scroll-padding-top: 72px
     }
 }
