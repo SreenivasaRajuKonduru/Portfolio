@@ -14,74 +14,129 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260924-1337">
+
+    <style id="terminal-v3-critical">
+        .terminal-v3-badge {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 2px 5px;
+            border: 1px solid #4aff70;
+            border-radius: 3px;
+            color: #4aff70;
+            font: 600 9px/1 "JetBrains Mono", monospace;
+            letter-spacing: .08em
+        }
+
+        .terminal-v2-screen {
+            background: #010301 !important
+        }
+
+        .terminal-v2-window {
+            width: min(1180px, 95vw) !important;
+            border: 1px solid rgba(86, 255, 126, .72) !important;
+            background: #030603 !important;
+            box-shadow: 0 0 90px rgba(54, 255, 102, .09), 0 38px 110px rgba(0, 0, 0, .72) !important
+        }
+
+        .terminal-v2-stage {
+            min-height: 690px !important;
+            background: #030603 !important
+        }
+
+        .terminal-v2-copy {
+            width: 61% !important;
+            padding: 54px 28px 38px 50px !important
+        }
+
+        .terminal-v2-logo {
+            font-size: clamp(6.5rem, 9.4vw, 10.5rem) !important;
+            color: #63ff84 !important
+        }
+
+        .terminal-v2-name h1 {
+            color: #63ff84 !important
+        }
+
+        .terminal-v2-portrait {
+            width: 58% !important
+        }
+
+        .terminal-v2-portrait img {
+            filter: grayscale(1) sepia(1) hue-rotate(72deg) saturate(6.2) brightness(.72) contrast(1.32) !important;
+            object-position: center 34% !important
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <!-- PORTFOLIO BOOT SEQUENCE -->
-    <div class="boot-screen" id="bootScreen" aria-label="Loading Sreenivasa Raju Konduru portfolio">
-        <div class="boot-shell">
-            <div class="boot-window">
-                <div class="boot-titlebar">
-                    <div class="boot-dots" aria-hidden="true">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <span>sreenivasa@portfolio:~</span>
-                    <button id="skipBoot" type="button">Skip</button>
-                </div>
+    <!-- RETRO TERMINAL INTRO V2 -->
+    <div class="boot-screen terminal-v2-screen" id="bootScreen" aria-label="Loading Sreenivasa Raju Konduru portfolio">
+        <div class="terminal-v2-grid" aria-hidden="true"></div>
+        <div class="terminal-v2-scanlines" aria-hidden="true"></div>
 
-                <div class="boot-terminal" id="bootTerminal" aria-live="polite">
-                    <div class="boot-line visible">
-                        <span class="boot-prompt">$</span>
-                        <span>initialize portfolio --profile sreenivasa-raju-konduru</span>
-                    </div>
+        <div class="terminal-v2-window">
+            <div class="terminal-v2-bar">
+                <div class="terminal-v2-dots"><span></span><span></span><span></span></div>
+                <span>sreenivasa@portfolio:~ <b class="terminal-v3-badge">V3</b></span>
+                <button id="skipBoot" type="button">skip</button>
+            </div>
 
-                    <div class="boot-line" data-boot-step>
-                        <span class="boot-status ok">[ OK ]</span>
-                        <span>Loading software engineering profile...</span>
+            <div class="terminal-v2-stage" id="bootTerminal">
+                <div class="terminal-v2-copy">
+                    <div class="terminal-v2-logo" aria-label="SRK">
+                        <span class="logo-main">SRK</span>
+                        <span class="logo-shadow one" aria-hidden="true">SRK</span>
+                        <span class="logo-shadow two" aria-hidden="true">SRK</span>
                     </div>
 
-                    <div class="boot-line" data-boot-step>
-                        <span class="boot-status ok">[ OK ]</span>
-                        <span>Detected: <b>4+ years engineering experience</b></span>
+                    <div class="terminal-v2-command visible">
+                        <span>sreenivasa@portfolio:~$</span>
+                        <b> ./launch-profile</b>
                     </div>
 
-                    <div class="boot-line" data-boot-step>
-                        <span class="boot-status ok">[ OK ]</span>
-                        <span>Primary stack: <b>Java · Spring Boot · Python · FastAPI</b></span>
+                    <div class="terminal-v2-line" data-boot-step><span>&gt;</span><b>[INFO] Loading profile...</b></div>
+                    <div class="terminal-v2-line" data-boot-step><span>&gt;</span><b>[INFO] Initializing modules...</b>
+                    </div>
+                    <div class="terminal-v2-line" data-boot-step><span>&gt;</span><b>[INFO] Connecting skills...</b>
+                    </div>
+                    <div class="terminal-v2-line" data-boot-step><span>&gt;</span><b>[INFO] Rendering portfolio...</b>
+                    </div>
+                    <div class="terminal-v2-line terminal-v2-ready" data-boot-step><span>&gt;</span><b>[READY]
+                            Welcome!</b></div>
+
+                    <div class="terminal-v2-name" data-boot-step>
+                        <div class="terminal-v2-rule"></div>
+                        <h1>SREENIVASA RAJU<br>KONDURU</h1>
+                        <p>Software Engineer Portfolio</p>
+                        <div class="terminal-v2-role">
+                            Java <i>•</i> Python <i>•</i> Backend <i>•</i> Distributed Systems
+                        </div>
                     </div>
 
-                    <div class="boot-line" data-boot-step>
-                        <span class="boot-status ok">[ OK ]</span>
-                        <span>Systems: <b>APIs · Kafka · SQL · Cloud · Distributed Workloads</b></span>
-                    </div>
-
-                    <div class="boot-line" data-boot-step>
-                        <span class="boot-status info">[ AI ]</span>
-                        <span>Supporting capability: semantic search · LLM integration · PyTorch</span>
-                    </div>
-
-                    <div class="boot-line boot-highlight" data-boot-step>
-                        <span class="boot-prompt">→</span>
-                        <span>Welcome. You are entering <b>Sreenivasa's engineering portfolio.</b></span>
-                    </div>
-
-                    <div class="boot-progress" data-boot-step>
+                    <div class="terminal-v2-progress boot-progress" data-boot-step>
+                        <div class="boot-progress-meta">
+                            <span>portfolio initialization</span>
+                            <b id="bootPercent">0%</b>
+                        </div>
                         <div class="boot-progress-bar"><span></span></div>
-                        <small>fetching experience · projects · architecture · skills</small>
                     </div>
+
+                    <button class="terminal-v2-enter" id="enterPortfolio" type="button" data-boot-step>
+                        ENTER PORTFOLIO <span>↵</span>
+                    </button>
                 </div>
 
-                <div class="boot-footer">
-                    <span>JAVA / PYTHON / BACKEND / DISTRIBUTED SYSTEMS</span>
-                    <b id="bootPercent">0%</b>
+                <div class="terminal-v2-portrait">
+                    <img src="profile2.jpg" alt="Sreenivasa Raju Konduru">
+                    <div class="terminal-v2-portrait-shade"></div>
+                    <div class="terminal-v2-portrait-scan"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
         <div class="shell nav">
@@ -121,62 +176,62 @@
 
     <main id="main">
         <!-- HERO -->
-        <section class="hero" id="top">
+        <section class="hero portfolio-hero" id="top">
             <div class="hero-grid-bg" aria-hidden="true"></div>
 
-            <div class="shell hero-layout">
-                <div class="hero-copy reveal">
-                    <p class="hero-kicker">Java · Python · Backend · Distributed Systems</p>
-
-                    <h1>Sreenivasa Raju<br>Konduru</h1>
-
-                    <p class="hero-title">
-                        Software Engineer · Java & Python Backend
-                    </p>
-
-                    <p class="hero-summary">
-                        I build production software with <strong>Java/Spring Boot</strong> and
-                        <strong>Python/FastAPI</strong>, backed by strong experience in REST APIs,
-                        asynchronous messaging, SQL databases, distributed systems, cloud infrastructure,
-                        observability and production support. AI/ML is a supporting capability for
-                        search, retrieval and intelligent application features not a replacement for core engineering.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a class="button primary" href="#projects">View projects</a>
-                        <a class="button secondary" href="resume.pdf" target="_blank" rel="noopener">View résumé ↗</a>
+            <div class="shell portfolio-hero-grid">
+                <div class="portfolio-hero-copy reveal">
+                    <div class="hero-status">
+                        <span class="status-dot"></span>
+                        <span>AVAILABLE FOR SOFTWARE ENGINEERING OPPORTUNITIES</span>
                     </div>
 
-                    <div class="hero-links">
+                    <p class="hero-overline">SREENIVASA RAJU KONDURU</p>
+                    <h1>Software Engineer</h1>
+                    <h2>Java & Python Backend · Distributed Systems</h2>
+
+                    <div class="hero-dynamic-line">
+                        <span>BUILDING</span>
+                        <strong id="heroRotatingRole">enterprise backend services</strong>
+                        <i class="typing-cursor"></i>
+                    </div>
+
+                    <p class="hero-summary hero-summary-compact">
+                        I build reliable backend services, APIs, automation and distributed systems using
+                        Java/Spring Boot and Python/FastAPI, with production experience across messaging,
+                        databases, cloud infrastructure, observability and performance engineering.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button primary" href="#experience">View experience ↓</a>
+                        <a class="button secondary" href="#projects">Explore projects</a>
+                        <a class="button secondary" href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+                    </div>
+
+                    <div class="hero-metrics portfolio-metrics">
+                        <div><strong>4+ Years</strong><span>Software Engineering</span></div>
+                        <div><strong>35%</strong><span>API latency reduction</span></div>
+                        <div><strong>1,000</strong><span>Concurrent connections tested</span></div>
+                    </div>
+
+                    <div class="hero-links compact-links">
                         <a href="https://github.com/SreenivasaRajuKonduru" target="_blank" rel="noopener">GitHub ↗</a>
                         <a href="https://www.linkedin.com/in/kondurusreenivasaraju" target="_blank"
                             rel="noopener">LinkedIn ↗</a>
                         <a href="mailto:kondurusreenivasaraju1@gmail.com">Email ↗</a>
                     </div>
-
-                    <div class="hero-metrics">
-                        <div>
-                            <strong>4+ years</strong>
-                            <span>software engineering experience</span>
-                        </div>
-                        <div>
-                            <strong>35%</strong>
-                            <span>API latency reduction</span>
-                        </div>
-                        <div>
-                            <strong>1,000</strong>
-                            <span>concurrent connections tested</span>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="hero-photo-wrap reveal">
-                    <div class="hero-photo-card">
+                <div class="portfolio-hero-media reveal">
+                    <div class="portfolio-photo">
                         <img src="profile2.jpg" alt="Sreenivasa Raju Konduru">
-                        <div class="photo-overlay">
-                            <span>JAVA · PYTHON · CLOUD</span>
-                            <strong>Building production-minded systems.</strong>
-                        </div>
+                    </div>
+
+                    <div class="hero-tech-strip">
+                        <div><span>CORE</span><strong>Java · Spring Boot<br>Python · FastAPI</strong></div>
+                        <div><span>SYSTEMS</span><strong>Kafka · PostgreSQL · Redis<br>AWS · Docker ·
+                                Kubernetes</strong></div>
+                        <div><span>SUPPORTING</span><strong>Observability · React<br>AI Integration</strong></div>
                     </div>
                 </div>
             </div>
@@ -324,7 +379,7 @@
 
                 <div class="about-grid">
                     <div class="about-photo reveal">
-                        <img src="profile2.jpg" alt="Sreenivasa Raju Konduru outdoors">
+                        <img src="profile.jpg" alt="Sreenivasa Raju Konduru outdoors">
                     </div>
 
                     <div class="about-copy reveal">
@@ -871,166 +926,205 @@
         </section>
 
         <!-- SKILLS -->
-        <section class="section" id="skills">
+        <section class="section section-dark skills-redesign" id="skills">
             <div class="shell">
-                <div class="section-head reveal">
-                    <p class="section-number">04</p>
+                <div class="section-label reveal"><span>04</span><b>TECH STACK</b></div>
+
+                <div class="skills-heading reveal">
                     <div>
-                        <p class="eyebrow">Skills</p>
-                        <h2>Technical toolkit.</h2>
-                        <p class="section-intro">
-                            Organized around the kind of work I use each technology for.
+                        <h2>Engineering stack.</h2>
+                        <p>
+                            Select a domain to see the technologies, system flow and where that capability fits in my
+                            backend work.
                         </p>
                     </div>
-                </div>
-
-                <div class="skill-console reveal">
-                    <div class="console-tabs" role="tablist" aria-label="Engineering focus explorer">
-                        <button class="console-tab active" type="button" data-skill-tab="java">Java Backend</button>
-                        <button class="console-tab" type="button" data-skill-tab="python">Python</button>
-                        <button class="console-tab" type="button" data-skill-tab="distributed">Distributed</button>
-                        <button class="console-tab" type="button" data-skill-tab="cloud">Cloud / Ops</button>
-                        <button class="console-tab" type="button" data-skill-tab="aiml">AI / ML</button>
-                    </div>
-
-                    <div class="console-window">
-                        <div class="console-topbar">
-                            <span>engineering-profile.sh</span>
-                            <b>INTERACTIVE</b>
-                        </div>
-
-                        <div class="console-content">
-                            <div class="console-copy">
-                                <p class="console-prompt">$ focus --role <span id="consoleRole">java-backend</span></p>
-                                <h3 id="consoleTitle">Enterprise Java backend engineering</h3>
-                                <p id="consoleText">Spring Boot microservices, REST APIs, Oracle SQL, IBM MQ, security
-                                    integration, testing and production debugging.</p>
-                                <div class="console-chips" id="consoleChips">
-                                    <span>Java</span><span>Spring Boot</span><span>REST
-                                        APIs</span><span>Oracle</span><span>IBM MQ</span><span>JUnit</span>
-                                </div>
-                            </div>
-
-                            <div class="console-flow" id="consoleFlow">
-                                <div>Client</div><i>→</i>
-                                <div>Spring Boot API</div><i>→</i>
-                                <div>Oracle / MQ</div>
-                            </div>
-                        </div>
+                    <div class="skills-summary">
+                        <span>CORE PROFILE</span>
+                        <strong>Java · Python · Backend · Distributed Systems</strong>
+                        <small>Cloud, observability and AI integration support the core.</small>
                     </div>
                 </div>
 
-                <div class="skills-grid">
-                    <article class="skill-card reveal">
-                        <h3>Languages</h3>
-                        <div class="skill-list">
-                            <span>Java</span><span>Python</span><span>SQL</span><span>PL/SQL</span>
-                            <span>C++</span><span>Bash / Shell</span>
-                        </div>
-                    </article>
+                <div class="stack-focus reveal" id="skillTopology">
+                    <div class="stack-focus-tabs">
+                        <button class="stack-focus-tab active" data-stack="java" type="button"><span>01</span><b>Java
+                                Backend</b></button>
+                        <button class="stack-focus-tab" data-stack="python" type="button"><span>02</span><b>Python
+                                Backend</b></button>
+                        <button class="stack-focus-tab" data-stack="distributed"
+                            type="button"><span>03</span><b>Distributed</b></button>
+                        <button class="stack-focus-tab" data-stack="cloud" type="button"><span>04</span><b>Cloud /
+                                Ops</b></button>
+                        <button class="stack-focus-tab" data-stack="ai" type="button"><span>05</span><b>AI
+                                Integration</b></button>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Java & Enterprise Backend</h3>
-                        <div class="skill-list">
-                            <span>Java 8 / 17 / 21</span><span>Spring Boot</span><span>Spring MVC</span>
-                            <span>Spring Security</span><span>Spring AOP</span><span>REST APIs</span>
-                            <span>Microservices</span><span>JPA / Hibernate</span><span>Java EE 8</span>
+                    <div class="stack-focus-main">
+                        <div class="stack-focus-copy">
+                            <p class="console-prompt">$ inspect <span id="stackRole">java-backend</span></p>
+                            <div class="stack-focus-status" id="topologyStatus">JAVA BACKEND ACTIVE</div>
+                            <h3 id="stackTitle">Enterprise Java backend engineering</h3>
+                            <p id="stackText">
+                                Spring Boot microservices, REST APIs, Oracle SQL, IBM MQ,
+                                security integration, automated testing and production debugging.
+                            </p>
+
+                            <div class="topology-chips" id="stackChips">
+                                <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Oracle</span>
+                                <span>IBM MQ</span><span>JPA/Hibernate</span><span>JUnit</span><span>Mockito</span>
+                            </div>
+                        </div>
+
+                        <div class="stack-focus-visual">
+                            <div class="stack-flow-label">SYSTEM FLOW</div>
+                            <div class="topology-flow" id="stackFlow">
+                                <div><small>ENTRY</small><strong>Client</strong></div>
+                                <i>→</i>
+                                <div><small>SERVICE</small><strong>Spring Boot API</strong></div>
+                                <i>→</i>
+                                <div><small>DATA / MQ</small><strong>Oracle · IBM MQ</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technology-directory reveal">
+                    <div class="technology-row">
+                        <div class="technology-label"><span>01</span>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="technology-items">
+                            <span>Java 8 / 17 / 21</span><span>Python</span><span>SQL</span><span>PL/SQL</span>
+                            <span>JavaScript</span><span>TypeScript</span><span>C++</span><span>Go</span><span>Bash /
+                                Shell</span>
+                        </div>
+                    </div>
+
+                    <div class="technology-row">
+                        <div class="technology-label"><span>02</span>
+                            <h3>Java & Enterprise Backend</h3>
+                        </div>
+                        <div class="technology-items">
+                            <span>Spring Boot</span><span>Spring MVC</span><span>Spring Security</span><span>Spring
+                                AOP</span>
+                            <span>Microservices</span><span>REST APIs</span><span>JPA / Hibernate</span><span>Java EE
+                                8</span>
                             <span>EJB 3</span><span>CDI</span><span>JAX-RS</span><span>JAXB / XML</span>
-                            <span>JSF / Facelets</span><span>PrimeFaces</span>
+                            <span>JSF / Facelets</span><span>PrimeFaces</span><span>WildFly / JBoss</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Python Backend & Automation</h3>
-                        <div class="skill-list">
-                            <span>FastAPI</span><span>SQLAlchemy</span><span>Alembic</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>03</span>
+                            <h3>Python Backend & Automation</h3>
+                        </div>
+                        <div class="technology-items">
+                            <span>FastAPI</span><span>Flask</span><span>SQLAlchemy</span><span>Alembic</span>
                             <span>Selenium WebDriver</span><span>OpenPyXL</span><span>Automation</span>
                             <span>Validation Workflows</span><span>Data Processing</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Databases & Storage</h3>
-                        <div class="skill-list">
-                            <span>PostgreSQL</span><span>Oracle SQL</span><span>MySQL</span>
-                            <span>MongoDB</span><span>Redis</span><span>pgvector</span>
-                            <span>Transactions</span><span>Query Optimization</span><span>Indexing</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>04</span>
+                            <h3>Data & Storage</h3>
                         </div>
-                    </article>
+                        <div class="technology-items">
+                            <span>PostgreSQL</span><span>Oracle SQL</span><span>MongoDB</span><span>Redis</span>
+                            <span>pgvector</span><span>Transactions</span><span>Query Optimization</span>
+                            <span>Indexing</span><span>Connection Pooling</span>
+                        </div>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Messaging & Distributed Systems</h3>
-                        <div class="skill-list">
+                    <div class="technology-row">
+                        <div class="technology-label"><span>05</span>
+                            <h3>Messaging & Distributed Systems</h3>
+                        </div>
+                        <div class="technology-items">
                             <span>Apache Kafka</span><span>Kafka Consumer Groups</span><span>IBM MQ / JMS</span>
                             <span>Transactional Outbox</span><span>Idempotency</span><span>Retry Scheduling</span>
-                            <span>Dead-Letter Queues</span><span>Controlled Replay</span>
-                            <span>Circuit Breakers</span><span>Rate Limiting</span>
+                            <span>Dead-Letter Queues</span><span>Controlled Replay</span><span>Circuit Breakers</span>
+                            <span>Rate Limiting</span><span>Concurrency</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Cloud & Infrastructure</h3>
-                        <div class="skill-list">
-                            <span>AWS</span><span>Azure</span><span>Docker</span><span>Docker Compose</span>
-                            <span>Kubernetes</span><span>NGINX</span><span>Linux / Unix</span>
-                            <span>Terraform</span><span>AWS CDK</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>06</span>
+                            <h3>Cloud & Infrastructure</h3>
                         </div>
-                    </article>
+                        <div class="technology-items">
+                            <span>AWS</span><span>AWS Lambda</span><span>Amazon S3</span><span>API Gateway</span>
+                            <span>Azure</span><span>Docker</span><span>Docker Compose</span><span>Kubernetes</span>
+                            <span>NGINX</span><span>Terraform</span><span>AWS CDK</span><span>Linux / Unix</span>
+                        </div>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Security</h3>
-                        <div class="skill-list">
+                    <div class="technology-row">
+                        <div class="technology-label"><span>07</span>
+                            <h3>Security & Identity</h3>
+                        </div>
+                        <div class="technology-items">
                             <span>OAuth 2.0</span><span>JWT</span><span>RBAC</span><span>CyberArk</span>
-                            <span>Secrets Management</span><span>Authentication</span><span>Authorization</span>
-                            <span>Audit Trails</span>
+                            <span>Secrets
+                                Management</span><span>Authentication</span><span>Authorization</span><span>Audit
+                                Trails</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Observability & Production Ops</h3>
-                        <div class="skill-list">
-                            <span>Splunk</span><span>Prometheus</span><span>Grafana</span>
-                            <span>OpenTelemetry</span><span>Jaeger</span><span>Structured Logging</span>
-                            <span>Distributed Tracing</span><span>Metrics</span><span>Health Checks</span>
-                            <span>Readiness Probes</span><span>Root-Cause Analysis</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>08</span>
+                            <h3>Observability & Production Ops</h3>
                         </div>
-                    </article>
+                        <div class="technology-items">
+                            <span>Splunk</span><span>Prometheus</span><span>Grafana</span><span>OpenTelemetry</span>
+                            <span>Jaeger</span><span>Structured Logging</span><span>Distributed Tracing</span>
+                            <span>Metrics</span><span>Health Checks</span><span>Readiness Probes</span><span>Root-Cause
+                                Analysis</span>
+                        </div>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Testing & Delivery</h3>
-                        <div class="skill-list">
+                    <div class="technology-row">
+                        <div class="technology-label"><span>09</span>
+                            <h3>Testing & Delivery</h3>
+                        </div>
+                        <div class="technology-items">
                             <span>JUnit</span><span>Mockito</span><span>Postman</span><span>Selenium</span>
-                            <span>Load Testing</span><span>Jenkins</span><span>GitHub Actions</span>
-                            <span>Maven</span><span>Git</span><span>Bitbucket</span><span>CI/CD</span>
+                            <span>Load Testing</span><span>Jenkins</span><span>GitHub Actions</span><span>Maven</span>
+                            <span>Git</span><span>Bitbucket</span><span>CI/CD</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Frontend & Web</h3>
-                        <div class="skill-list">
-                            <span>React</span><span>JavaScript</span><span>TypeScript</span>
-                            <span>HTML5</span><span>CSS3</span><span>Angular</span>
-                            <span>WordPress / Gutenberg</span><span>WCAG Accessibility</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>10</span>
+                            <h3>Frontend & Web</h3>
                         </div>
-                    </article>
+                        <div class="technology-items">
+                            <span>React</span><span>Angular</span><span>HTML5</span><span>CSS3</span>
+                            <span>WordPress / Gutenberg</span><span>WCAG Accessibility</span><span>Responsive UI</span>
+                        </div>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>AI / ML & Search</h3>
-                        <div class="skill-list">
+                    <div class="technology-row">
+                        <div class="technology-label"><span>11</span>
+                            <h3>AI / ML & Search</h3>
+                        </div>
+                        <div class="technology-items">
                             <span>LLM API Integration</span><span>Semantic Search</span><span>RAG Concepts</span>
-                            <span>Vector Search</span><span>PyTorch</span>
-                            <span>R2U-Net</span><span>Computer Vision</span><span>Cityscapes</span>
+                            <span>Vector Search</span><span>PyTorch</span><span>R2U-Net</span>
+                            <span>Computer Vision</span><span>Cityscapes</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="skill-card reveal">
-                        <h3>Engineering Practices</h3>
-                        <div class="skill-list">
-                            <span>API Design</span><span>System Design</span><span>Data Structures & Algorithms</span>
-                            <span>Concurrency</span><span>Code Reviews</span><span>Agile / Scrum</span>
-                            <span>Debugging</span><span>Performance Tuning</span><span>Documentation</span>
+                    <div class="technology-row">
+                        <div class="technology-label"><span>12</span>
+                            <h3>Engineering Practices</h3>
                         </div>
-                    </article>
+                        <div class="technology-items">
+                            <span>API Design</span><span>System Design</span><span>Data Structures & Algorithms</span>
+                            <span>Code Reviews</span><span>Agile / Scrum</span><span>Debugging</span>
+                            <span>Performance Tuning</span><span>Documentation</span><span>Production Support</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1155,81 +1249,123 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
-        // Portfolio boot sequence
+        // Portfolio boot sequence — V2 sequential terminal.
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        if (window.location.hash) {
+            history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+        window.scrollTo(0, 0);
+
         (() => {
             const screen = document.getElementById("bootScreen");
             const skip = document.getElementById("skipBoot");
+            const enter = document.getElementById("enterPortfolio");
             const terminal = document.getElementById("bootTerminal");
-            const lines = [...document.querySelectorAll("[data-boot-step]")];
+            const steps = [...document.querySelectorAll("[data-boot-step]")];
             const percent = document.getElementById("bootPercent");
-            const progress = document.querySelector(".boot-progress-bar span");
+            const progress = document.querySelector(".terminal-v2-progress .boot-progress-bar span");
             const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
             if (!screen) return;
-
             document.body.classList.add("booting");
 
             let cancelled = false;
-            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+            let closing = false;
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-            function setProgress(value) {
+            const setProgress = value => {
                 const safe = Math.max(0, Math.min(100, value));
-                percent.textContent = safe + "%";
+                if (percent) percent.textContent = safe + "%";
                 if (progress) progress.style.width = safe + "%";
-            }
+            };
 
-            function revealLine(line) {
-                line.classList.add("visible");
+            const scrollTerminal = () => {
                 if (terminal) terminal.scrollTop = terminal.scrollHeight;
-            }
+            };
 
-            async function finishBoot() {
-                if (cancelled) return;
-                setProgress(100);
-                await sleep(reduceMotion ? 20 : 1100);
-                screen.classList.add("boot-hidden");
-                document.body.classList.remove("booting");
-            }
-
-            function skipBoot() {
-                cancelled = true;
-                lines.forEach(line => line.classList.add("visible"));
-                setProgress(100);
-                screen.classList.add("boot-hidden");
-                document.body.classList.remove("booting");
-            }
-
-            skip.addEventListener("click", skipBoot);
-
-            async function runBoot() {
-                if (reduceMotion) {
-                    lines.forEach(revealLine);
-                    setProgress(100);
-                    await finishBoot();
-                    return;
+            // Store line text, then clear it until that line appears.
+            steps.forEach(step => {
+                if (step.classList.contains("terminal-v2-line")) {
+                    const text = step.querySelector("b");
+                    if (text) {
+                        step.dataset.originalText = text.textContent;
+                        if (!reduceMotion) text.textContent = "";
+                    }
                 }
+            });
 
-                // Initial command is already visible.
-                setProgress(8);
-                await sleep(900);
+            async function typeLine(step) {
+                step.classList.add("visible");
+                const text = step.querySelector("b");
+                const original = step.dataset.originalText || "";
 
-                const progressMarks = [18, 30, 43, 57, 70, 84, 94];
+                if (!text || reduceMotion) return;
 
-                for (let i = 0; i < lines.length; i++) {
+                for (const char of original) {
                     if (cancelled) return;
-
-                    revealLine(lines[i]);
-                    setProgress(progressMarks[i] ?? 94);
-
-                    // Give visitors enough time to read each line before showing the next.
-                    await sleep(i === lines.length - 1 ? 1200 : 950);
+                    text.textContent += char;
+                    scrollTerminal();
+                    await sleep(13);
                 }
-
-                if (cancelled) return;
-                await finishBoot();
+                await sleep(260);
             }
 
-            runBoot();
+            async function closeIntro() {
+                if (closing) return;
+                closing = true;
+                setProgress(100);
+                await sleep(reduceMotion ? 10 : 350);
+                window.scrollTo(0, 0);
+                screen.classList.add("boot-hidden");
+                document.body.classList.remove("booting");
+            }
+
+            function skipIntro() {
+                cancelled = true;
+                steps.forEach(step => {
+                    step.classList.add("visible");
+                    if (step.classList.contains("terminal-v2-line")) {
+                        const text = step.querySelector("b");
+                        if (text && step.dataset.originalText) text.textContent = step.dataset.originalText;
+                    }
+                });
+                setProgress(100);
+                screen.classList.add("boot-hidden");
+                document.body.classList.remove("booting");
+            }
+
+            skip?.addEventListener("click", skipIntro);
+            enter?.addEventListener("click", closeIntro);
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Escape" && document.body.classList.contains("booting")) skipIntro();
+                if (event.key === "Enter" && enter?.classList.contains("visible")) closeIntro();
+            });
+
+            (async () => {
+                setProgress(5);
+                await sleep(reduceMotion ? 10 : 650);
+
+                const marks = [18, 32, 46, 60, 74, 88, 96, 99];
+
+                for (let i = 0; i < steps.length; i++) {
+                    if (cancelled) return;
+                    const step = steps[i];
+
+                    if (step.classList.contains("terminal-v2-line")) {
+                        await typeLine(step);
+                    } else {
+                        step.classList.add("visible");
+                        scrollTerminal();
+                        await sleep(step.classList.contains("terminal-v2-name") ? 850 : 500);
+                    }
+
+                    setProgress(marks[i] ?? 99);
+                }
+
+                await sleep(1600);
+                if (!cancelled) await closeIntro();
+            })();
         })();
 
         // Theme
@@ -1431,67 +1567,105 @@
             javaFlowRunning = false;
         });
 
-        // Interactive skill console
-        const consoleData = {
+        // Interactive stack topology
+        const stackData = {
             java: {
                 role: "java-backend",
-                title: "Java backend & enterprise engineering",
+                status: "JAVA BACKEND ACTIVE",
+                title: "Enterprise Java backend engineering",
                 text: "Spring Boot microservices, REST APIs, Oracle SQL, IBM MQ, security integration, automated testing and production debugging.",
-                chips: ["Java", "Spring Boot", "REST APIs", "Oracle", "IBM MQ", "JUnit", "Mockito"],
-                flow: ["Client", "Spring Boot API", "Oracle / IBM MQ"]
+                chips: ["Java", "Spring Boot", "REST APIs", "Oracle", "IBM MQ", "JPA/Hibernate", "JUnit", "Mockito"],
+                flow: [["ENTRY", "Client"], ["SERVICE", "Spring Boot API"], ["DATA / MQ", "Oracle · IBM MQ"]]
             },
             python: {
                 role: "python-backend",
-                title: "Python backend, APIs & automation",
-                text: "FastAPI services, Selenium/OpenPyXL automation, validation, data workflows and PostgreSQL-backed operational tooling.",
-                chips: ["Python", "FastAPI", "Selenium", "OpenPyXL", "PostgreSQL", "Automation"],
-                flow: ["Input", "Python / FastAPI", "DB / Browser Workflow"]
+                status: "PYTHON BACKEND ACTIVE",
+                title: "Python APIs, automation & backend services",
+                text: "FastAPI services, Selenium and OpenPyXL automation, validation workflows, PostgreSQL-backed tooling and data processing.",
+                chips: ["Python", "FastAPI", "SQLAlchemy", "Alembic", "Selenium", "OpenPyXL", "PostgreSQL", "Automation"],
+                flow: [["INPUT", "Request / Data"], ["SERVICE", "FastAPI / Python"], ["OUTPUT", "DB / Workflow"]]
             },
             distributed: {
                 role: "distributed-systems",
-                title: "Reliable asynchronous processing",
-                text: "Kafka consumer groups, transactional outbox, idempotency, retries, DLQ/replay, Redis coordination and distributed rate limiting.",
-                chips: ["Kafka", "Outbox", "Idempotency", "Retries", "DLQ", "Redis"],
-                flow: ["API", "Kafka", "Worker / Retry / DLQ"]
+                status: "DISTRIBUTED SYSTEMS ACTIVE",
+                title: "Reliable asynchronous and distributed processing",
+                text: "Kafka consumer groups, transactional outbox, idempotency, retries, dead-letter handling, replay, Redis coordination and rate limiting.",
+                chips: ["Kafka", "Consumer Groups", "Outbox", "Idempotency", "Retry", "DLQ", "Replay", "Redis"],
+                flow: [["PRODUCER", "API"], ["EVENT BUS", "Kafka"], ["PROCESSING", "Worker / Retry / DLQ"]]
             },
             cloud: {
                 role: "cloud-production",
-                title: "Cloud, deployment and observability",
-                text: "AWS, Docker, Kubernetes, NGINX and production telemetry with OpenTelemetry, Jaeger, Prometheus, Grafana and Splunk.",
-                chips: ["AWS", "Docker", "Kubernetes", "NGINX", "OpenTelemetry", "Grafana"],
-                flow: ["Service", "Kubernetes", "Metrics / Traces / Logs"]
+                status: "CLOUD / PRODUCTION ACTIVE",
+                title: "Cloud deployment, reliability & observability",
+                text: "AWS, Docker, Kubernetes and NGINX with telemetry through OpenTelemetry, Jaeger, Prometheus, Grafana and Splunk.",
+                chips: ["AWS", "Docker", "Kubernetes", "NGINX", "OpenTelemetry", "Jaeger", "Prometheus", "Grafana"],
+                flow: [["BUILD", "Service"], ["RUNTIME", "Kubernetes"], ["SIGNALS", "Metrics / Traces / Logs"]]
             },
-            aiml: {
-                role: "ai-ml-integration",
-                title: "AI/ML application engineering",
-                text: "Semantic search and LLM application integration, plus PyTorch/R2U-Net computer-vision work for semantic segmentation.",
-                chips: ["Python", "Semantic Search", "LLM APIs", "PyTorch", "R2U-Net"],
-                flow: ["Application", "Retrieval / Model API", "Structured Result"]
+            ai: {
+                role: "ai-integration",
+                status: "AI INTEGRATION ACTIVE",
+                title: "AI features integrated into production applications",
+                text: "Semantic search, structured retrieval, LLM API integration and PyTorch computer-vision work used as application capabilities around a solid backend core.",
+                chips: ["Semantic Search", "RAG Concepts", "LLM APIs", "Vector Search", "pgvector", "PyTorch", "R2U-Net"],
+                flow: [["APP", "Application"], ["INTELLIGENCE", "Retrieval / Model API"], ["RESULT", "Structured Response"]]
             }
         };
 
-        const consoleTabs = document.querySelectorAll(".console-tab");
-        const consoleRole = document.getElementById("consoleRole");
-        const consoleTitle = document.getElementById("consoleTitle");
-        const consoleText = document.getElementById("consoleText");
-        const consoleChips = document.getElementById("consoleChips");
-        const consoleFlow = document.getElementById("consoleFlow");
+        const topology = document.getElementById("skillTopology");
+        const stackRole = document.getElementById("stackRole");
+        const stackTitle = document.getElementById("stackTitle");
+        const stackText = document.getElementById("stackText");
+        const stackChips = document.getElementById("stackChips");
+        const stackFlow = document.getElementById("stackFlow");
+        const topologyStatus = document.getElementById("topologyStatus");
 
-        consoleTabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                consoleTabs.forEach(item => item.classList.remove("active"));
-                tab.classList.add("active");
+        if (topology) {
+            topology.addEventListener("click", event => {
+                const button = event.target.closest(".stack-focus-tab");
+                if (!button || !topology.contains(button)) return;
 
-                const data = consoleData[tab.dataset.skillTab];
-                consoleRole.textContent = data.role;
-                consoleTitle.textContent = data.title;
-                consoleText.textContent = data.text;
-                consoleChips.innerHTML = data.chips.map(item => `<span>${item}</span>`).join("");
-                consoleFlow.innerHTML = data.flow.map((item, index) =>
-                    index === data.flow.length - 1 ? `<div>${item}</div>` : `<div>${item}</div><i>→</i>`
-                ).join("");
+                const key = button.dataset.stack;
+                const data = stackData[key];
+                if (!data) return;
+
+                topology.querySelectorAll(".stack-focus-tab").forEach(node => node.classList.remove("active"));
+                button.classList.add("active");
+
+                topology.dataset.active = key;
+                stackRole.textContent = data.role;
+                stackTitle.textContent = data.title;
+                stackText.textContent = data.text;
+                topologyStatus.textContent = data.status;
+
+                stackChips.innerHTML = data.chips.map(item => `<span>${item}</span>`).join("");
+                stackFlow.innerHTML = data.flow.map((item, index) => {
+                    const node = `<div><small>${item[0]}</small><strong>${item[1]}</strong></div>`;
+                    return index === data.flow.length - 1 ? node : node + `<i>→</i>`;
+                }).join("");
             });
-        });
+        }
+
+        // Hero rotating engineering focus
+        const heroRole = document.getElementById("heroRotatingRole");
+        if (heroRole) {
+            const roles = [
+                "enterprise backend services",
+                "Python APIs & automation",
+                "distributed job systems",
+                "cloud-native platforms",
+                "observable production software"
+            ];
+            let roleIndex = 0;
+
+            setInterval(() => {
+                roleIndex = (roleIndex + 1) % roles.length;
+                heroRole.classList.add("switching");
+                setTimeout(() => {
+                    heroRole.textContent = roles[roleIndex];
+                    heroRole.classList.remove("switching");
+                }, 170);
+            }, 2200);
+        }
 
         // Contact form
         const form = document.getElementById("contactForm");
@@ -1529,6 +1703,13 @@
             } finally {
                 submit.disabled = false;
                 submit.textContent = original;
+            }
+        });
+
+
+        window.addEventListener("pageshow", () => {
+            if (!document.body.classList.contains("booting")) {
+                window.scrollTo(0, 0);
             }
         });
 
